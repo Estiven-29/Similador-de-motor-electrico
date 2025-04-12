@@ -179,63 +179,75 @@ class UIController:
         button_width = 0.2
         
         # Forward button
-        DirectButton(
+        self.forward_button = DirectButton(
             text="Forward",
             scale=0.05,
             frameSize=(-button_width, button_width, -0.05, 0.05),
             pos=(0, 0, buttons_y + 0.15),
+            relief=1,  # Raised relief
             command=self._cmd_forward,
-            parent=self.manual_panel
+            parent=self.manual_panel,
+            pressEffect=1
         )
         
         # Left button
-        DirectButton(
+        self.left_button = DirectButton(
             text="Left",
             scale=0.05,
             frameSize=(-button_width, button_width, -0.05, 0.05),
             pos=(-0.3, 0, buttons_y),
+            relief=1,  # Raised relief
             command=self._cmd_left,
-            parent=self.manual_panel
+            parent=self.manual_panel,
+            pressEffect=1
         )
         
         # Stop button
-        DirectButton(
+        self.stop_button = DirectButton(
             text="Stop",
             scale=0.05,
             frameSize=(-button_width, button_width, -0.05, 0.05),
             pos=(0, 0, buttons_y),
+            relief=1,  # Raised relief
             command=self._cmd_stop,
-            parent=self.manual_panel
+            parent=self.manual_panel,
+            pressEffect=1
         )
         
         # Right button
-        DirectButton(
+        self.right_button = DirectButton(
             text="Right",
             scale=0.05,
             frameSize=(-button_width, button_width, -0.05, 0.05),
             pos=(0.3, 0, buttons_y),
+            relief=1,  # Raised relief
             command=self._cmd_right,
-            parent=self.manual_panel
+            parent=self.manual_panel,
+            pressEffect=1
         )
         
         # Backward button
-        DirectButton(
+        self.backward_button = DirectButton(
             text="Backward",
             scale=0.05,
             frameSize=(-button_width, button_width, -0.05, 0.05),
             pos=(0, 0, buttons_y - 0.15),
+            relief=1,  # Raised relief
             command=self._cmd_backward,
-            parent=self.manual_panel
+            parent=self.manual_panel,
+            pressEffect=1
         )
         
         # Reset position button
-        DirectButton(
+        self.reset_button = DirectButton(
             text="Reset Position",
             scale=0.05,
             frameSize=(-button_width, button_width, -0.05, 0.05),
             pos=(0, 0, -0.3),
+            relief=1,  # Raised relief
             command=self._reset_position,
-            parent=self.manual_panel
+            parent=self.manual_panel,
+            pressEffect=1
         )
     
     def _create_waypoint_control(self):
@@ -292,13 +304,15 @@ class UIController:
         )
         
         # Add waypoint button
-        DirectButton(
+        self.add_waypoint_button = DirectButton(
             text="Add Waypoint",
             scale=0.05,
             frameSize=(-0.2, 0.2, -0.05, 0.05),
             pos=(0.1, 0, 0.15),
+            relief=1,  # Raised relief
             command=self._add_waypoint,
-            parent=self.waypoint_panel
+            parent=self.waypoint_panel,
+            pressEffect=1
         )
         
         # Add waypoint at click
@@ -315,18 +329,22 @@ class UIController:
             scale=0.05,
             frameSize=(-0.2, 0.2, -0.05, 0.05),
             pos=(-0.3, 0, -0.1),
+            relief=1,  # Raised relief
             command=self._toggle_follow_waypoints,
-            parent=self.waypoint_panel
+            parent=self.waypoint_panel,
+            pressEffect=1
         )
         
         # Clear waypoints button
-        DirectButton(
+        self.clear_waypoints_button = DirectButton(
             text="Clear Waypoints",
             scale=0.05,
             frameSize=(-0.2, 0.2, -0.05, 0.05),
             pos=(0.3, 0, -0.1),
+            relief=1,  # Raised relief
             command=self._clear_waypoints,
-            parent=self.waypoint_panel
+            parent=self.waypoint_panel,
+            pressEffect=1
         )
         
         # Waypoint planning algorithm selection
@@ -421,13 +439,15 @@ class UIController:
         )
         
         # Set target button
-        DirectButton(
+        self.set_target_button = DirectButton(
             text="Set Target",
             scale=0.05,
             frameSize=(-0.15, 0.15, -0.05, 0.05),
             pos=(0.35, 0, 0.15),
+            relief=1,  # Raised relief
             command=self._set_target_position,
-            parent=self.position_panel
+            parent=self.position_panel,
+            pressEffect=1
         )
         
         # Or click in the scene to set target position
@@ -444,8 +464,10 @@ class UIController:
             scale=0.05,
             frameSize=(-0.25, 0.25, -0.05, 0.05),
             pos=(-0.3, 0, -0.1),
+            relief=1,  # Raised relief
             command=self._toggle_position_control,
-            parent=self.position_panel
+            parent=self.position_panel,
+            pressEffect=1
         )
         
         # Control algorithm selection
