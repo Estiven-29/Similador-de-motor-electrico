@@ -488,7 +488,7 @@ class UIController:
         DirectLabel(
             text="Position:",
             scale=0.04,
-            align=TextNode.ALeft,
+            text_align=TextNode.ALeft,
             pos=(-0.25, 0, 0.15),
             parent=self.telemetry_frame
         )
@@ -496,7 +496,7 @@ class UIController:
         self.telemetry_position = DirectLabel(
             text="X: 0.00  Y: 0.00",
             scale=0.04,
-            align=TextNode.ALeft,
+            text_align=TextNode.ALeft,
             pos=(-0.25, 0, 0.10),
             parent=self.telemetry_frame
         )
@@ -504,7 +504,7 @@ class UIController:
         DirectLabel(
             text="Orientation:",
             scale=0.04,
-            align=TextNode.ALeft,
+            text_align=TextNode.ALeft,
             pos=(-0.25, 0, 0.05),
             parent=self.telemetry_frame
         )
@@ -512,7 +512,7 @@ class UIController:
         self.telemetry_orientation = DirectLabel(
             text="θ: 0.00 degrees",
             scale=0.04,
-            align=TextNode.ALeft,
+            text_align=TextNode.ALeft,
             pos=(-0.25, 0, 0.00),
             parent=self.telemetry_frame
         )
@@ -521,7 +521,7 @@ class UIController:
         DirectLabel(
             text="Velocities:",
             scale=0.04,
-            align=TextNode.ALeft,
+            text_align=TextNode.ALeft,
             pos=(-0.25, 0, -0.05),
             parent=self.telemetry_frame
         )
@@ -529,7 +529,7 @@ class UIController:
         self.telemetry_velocities = DirectLabel(
             text="Linear: 0.00 m/s\nAngular: 0.00 rad/s",
             scale=0.04,
-            align=TextNode.ALeft,
+            text_align=TextNode.ALeft,
             pos=(-0.25, 0, -0.15),
             parent=self.telemetry_frame
         )
@@ -538,7 +538,7 @@ class UIController:
         DirectLabel(
             text="Motors:",
             scale=0.04,
-            align=TextNode.ALeft,
+            text_align=TextNode.ALeft,
             pos=(-0.25, 0, -0.20),
             parent=self.telemetry_frame
         )
@@ -546,7 +546,7 @@ class UIController:
         self.telemetry_motors = DirectLabel(
             text="Left: 0.00 V, 0.00 rad/s\nRight: 0.00 V, 0.00 rad/s",
             scale=0.04,
-            align=TextNode.ALeft,
+            text_align=TextNode.ALeft,
             pos=(-0.25, 0, -0.30),
             parent=self.telemetry_frame
         )
