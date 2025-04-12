@@ -1,0 +1,571 @@
+<CoordinateSystem> { Z-up }
+
+<Texture> floor-tex {
+  "../maps/floor-tex.rgb"
+}
+
+<Group> {
+  <Transform> {
+    <Matrix4> {
+      1 0 0 0
+      0 1 0 0
+      0 0 1 0
+      0 0 0 1
+    }
+  }
+  
+  <VertexPool> floor-verts {
+    <Vertex> 1 {
+      -20 -20 0
+      <Normal> { 0 0 1 }
+      <UV> { 0 0 }
+    }
+    <Vertex> 2 {
+      20 -20 0
+      <Normal> { 0 0 1 }
+      <UV> { 20 0 }
+    }
+    <Vertex> 3 {
+      20 20 0
+      <Normal> { 0 0 1 }
+      <UV> { 20 20 }
+    }
+    <Vertex> 4 {
+      -20 20 0
+      <Normal> { 0 0 1 }
+      <UV> { 0 20 }
+    }
+  }
+  
+  <Polygon> {
+    <TRef> { floor-tex }
+    <VertexRef> { 1 2 3 4 <Ref> { floor-verts } }
+  }
+}
+
+<!-- Add grid lines for reference -->
+<Group> grid {
+  <VertexPool> grid-verts {
+    <!-- Horizontal grid lines -->
+    <Vertex> 101 { -20 -20 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 102 { 20 -20 0.01 <Normal> { 0 0 1 } <UV> { 1 0 } }
+    <Vertex> 103 { -20 -19 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 104 { 20 -19 0.01 <Normal> { 0 0 1 } <UV> { 1 0 } }
+    <Vertex> 105 { -20 -18 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 106 { 20 -18 0.01 <Normal> { 0 0 1 } <UV> { 1 0 } }
+    <Vertex> 107 { -20 -17 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 108 { 20 -17 0.01 <Normal> { 0 0 1 } <UV> { 1 0 } }
+    <Vertex> 109 { -20 -16 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 110 { 20 -16 0.01 <Normal> { 0 0 1 } <UV> { 1 0 } }
+    <Vertex> 111 { -20 -15 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 112 { 20 -15 0.01 <Normal> { 0 0 1 } <UV> { 1 0 } }
+    <Vertex> 113 { -20 -14 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 114 { 20 -14 0.01 <Normal> { 0 0 1 } <UV> { 1 0 } }
+    <Vertex> 115 { -20 -13 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 116 { 20 -13 0.01 <Normal> { 0 0 1 } <UV> { 1 0 } }
+    <Vertex> 117 { -20 -12 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 118 { 20 -12 0.01 <Normal> { 0 0 1 } <UV> { 1 0 } }
+    <Vertex> 119 { -20 -11 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 120 { 20 -11 0.01 <Normal> { 0 0 1 } <UV> { 1 0 } }
+    <Vertex> 121 { -20 -10 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 122 { 20 -10 0.01 <Normal> { 0 0 1 } <UV> { 1 0 } }
+    <Vertex> 123 { -20 -9 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 124 { 20 -9 0.01 <Normal> { 0 0 1 } <UV> { 1 0 } }
+    <Vertex> 125 { -20 -8 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 126 { 20 -8 0.01 <Normal> { 0 0 1 } <UV> { 1 0 } }
+    <Vertex> 127 { -20 -7 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 128 { 20 -7 0.01 <Normal> { 0 0 1 } <UV> { 1 0 } }
+    <Vertex> 129 { -20 -6 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 130 { 20 -6 0.01 <Normal> { 0 0 1 } <UV> { 1 0 } }
+    <Vertex> 131 { -20 -5 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 132 { 20 -5 0.01 <Normal> { 0 0 1 } <UV> { 1 0 } }
+    <Vertex> 133 { -20 -4 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 134 { 20 -4 0.01 <Normal> { 0 0 1 } <UV> { 1 0 } }
+    <Vertex> 135 { -20 -3 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 136 { 20 -3 0.01 <Normal> { 0 0 1 } <UV> { 1 0 } }
+    <Vertex> 137 { -20 -2 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 138 { 20 -2 0.01 <Normal> { 0 0 1 } <UV> { 1 0 } }
+    <Vertex> 139 { -20 -1 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 140 { 20 -1 0.01 <Normal> { 0 0 1 } <UV> { 1 0 } }
+    <Vertex> 141 { -20 0 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 142 { 20 0 0.01 <Normal> { 0 0 1 } <UV> { 1 0 } }
+    <Vertex> 143 { -20 1 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 144 { 20 1 0.01 <Normal> { 0 0 1 } <UV> { 1 0 } }
+    <Vertex> 145 { -20 2 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 146 { 20 2 0.01 <Normal> { 0 0 1 } <UV> { 1 0 } }
+    <Vertex> 147 { -20 3 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 148 { 20 3 0.01 <Normal> { 0 0 1 } <UV> { 1 0 } }
+    <Vertex> 149 { -20 4 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 150 { 20 4 0.01 <Normal> { 0 0 1 } <UV> { 1 0 } }
+    <Vertex> 151 { -20 5 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 152 { 20 5 0.01 <Normal> { 0 0 1 } <UV> { 1 0 } }
+    <Vertex> 153 { -20 6 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 154 { 20 6 0.01 <Normal> { 0 0 1 } <UV> { 1 0 } }
+    <Vertex> 155 { -20 7 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 156 { 20 7 0.01 <Normal> { 0 0 1 } <UV> { 1 0 } }
+    <Vertex> 157 { -20 8 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 158 { 20 8 0.01 <Normal> { 0 0 1 } <UV> { 1 0 } }
+    <Vertex> 159 { -20 9 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 160 { 20 9 0.01 <Normal> { 0 0 1 } <UV> { 1 0 } }
+    <Vertex> 161 { -20 10 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 162 { 20 10 0.01 <Normal> { 0 0 1 } <UV> { 1 0 } }
+    <Vertex> 163 { -20 11 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 164 { 20 11 0.01 <Normal> { 0 0 1 } <UV> { 1 0 } }
+    <Vertex> 165 { -20 12 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 166 { 20 12 0.01 <Normal> { 0 0 1 } <UV> { 1 0 } }
+    <Vertex> 167 { -20 13 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 168 { 20 13 0.01 <Normal> { 0 0 1 } <UV> { 1 0 } }
+    <Vertex> 169 { -20 14 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 170 { 20 14 0.01 <Normal> { 0 0 1 } <UV> { 1 0 } }
+    <Vertex> 171 { -20 15 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 172 { 20 15 0.01 <Normal> { 0 0 1 } <UV> { 1 0 } }
+    <Vertex> 173 { -20 16 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 174 { 20 16 0.01 <Normal> { 0 0 1 } <UV> { 1 0 } }
+    <Vertex> 175 { -20 17 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 176 { 20 17 0.01 <Normal> { 0 0 1 } <UV> { 1 0 } }
+    <Vertex> 177 { -20 18 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 178 { 20 18 0.01 <Normal> { 0 0 1 } <UV> { 1 0 } }
+    <Vertex> 179 { -20 19 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 180 { 20 19 0.01 <Normal> { 0 0 1 } <UV> { 1 0 } }
+    <Vertex> 181 { -20 20 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 182 { 20 20 0.01 <Normal> { 0 0 1 } <UV> { 1 0 } }
+    
+    <!-- Vertical grid lines -->
+    <Vertex> 201 { -20 -20 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 202 { -20 20 0.01 <Normal> { 0 0 1 } <UV> { 0 1 } }
+    <Vertex> 203 { -19 -20 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 204 { -19 20 0.01 <Normal> { 0 0 1 } <UV> { 0 1 } }
+    <Vertex> 205 { -18 -20 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 206 { -18 20 0.01 <Normal> { 0 0 1 } <UV> { 0 1 } }
+    <Vertex> 207 { -17 -20 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 208 { -17 20 0.01 <Normal> { 0 0 1 } <UV> { 0 1 } }
+    <Vertex> 209 { -16 -20 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 210 { -16 20 0.01 <Normal> { 0 0 1 } <UV> { 0 1 } }
+    <Vertex> 211 { -15 -20 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 212 { -15 20 0.01 <Normal> { 0 0 1 } <UV> { 0 1 } }
+    <Vertex> 213 { -14 -20 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 214 { -14 20 0.01 <Normal> { 0 0 1 } <UV> { 0 1 } }
+    <Vertex> 215 { -13 -20 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 216 { -13 20 0.01 <Normal> { 0 0 1 } <UV> { 0 1 } }
+    <Vertex> 217 { -12 -20 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 218 { -12 20 0.01 <Normal> { 0 0 1 } <UV> { 0 1 } }
+    <Vertex> 219 { -11 -20 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 220 { -11 20 0.01 <Normal> { 0 0 1 } <UV> { 0 1 } }
+    <Vertex> 221 { -10 -20 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 222 { -10 20 0.01 <Normal> { 0 0 1 } <UV> { 0 1 } }
+    <Vertex> 223 { -9 -20 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 224 { -9 20 0.01 <Normal> { 0 0 1 } <UV> { 0 1 } }
+    <Vertex> 225 { -8 -20 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 226 { -8 20 0.01 <Normal> { 0 0 1 } <UV> { 0 1 } }
+    <Vertex> 227 { -7 -20 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 228 { -7 20 0.01 <Normal> { 0 0 1 } <UV> { 0 1 } }
+    <Vertex> 229 { -6 -20 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 230 { -6 20 0.01 <Normal> { 0 0 1 } <UV> { 0 1 } }
+    <Vertex> 231 { -5 -20 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 232 { -5 20 0.01 <Normal> { 0 0 1 } <UV> { 0 1 } }
+    <Vertex> 233 { -4 -20 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 234 { -4 20 0.01 <Normal> { 0 0 1 } <UV> { 0 1 } }
+    <Vertex> 235 { -3 -20 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 236 { -3 20 0.01 <Normal> { 0 0 1 } <UV> { 0 1 } }
+    <Vertex> 237 { -2 -20 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 238 { -2 20 0.01 <Normal> { 0 0 1 } <UV> { 0 1 } }
+    <Vertex> 239 { -1 -20 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 240 { -1 20 0.01 <Normal> { 0 0 1 } <UV> { 0 1 } }
+    <Vertex> 241 { 0 -20 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 242 { 0 20 0.01 <Normal> { 0 0 1 } <UV> { 0 1 } }
+    <Vertex> 243 { 1 -20 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 244 { 1 20 0.01 <Normal> { 0 0 1 } <UV> { 0 1 } }
+    <Vertex> 245 { 2 -20 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 246 { 2 20 0.01 <Normal> { 0 0 1 } <UV> { 0 1 } }
+    <Vertex> 247 { 3 -20 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 248 { 3 20 0.01 <Normal> { 0 0 1 } <UV> { 0 1 } }
+    <Vertex> 249 { 4 -20 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 250 { 4 20 0.01 <Normal> { 0 0 1 } <UV> { 0 1 } }
+    <Vertex> 251 { 5 -20 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 252 { 5 20 0.01 <Normal> { 0 0 1 } <UV> { 0 1 } }
+    <Vertex> 253 { 6 -20 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 254 { 6 20 0.01 <Normal> { 0 0 1 } <UV> { 0 1 } }
+    <Vertex> 255 { 7 -20 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 256 { 7 20 0.01 <Normal> { 0 0 1 } <UV> { 0 1 } }
+    <Vertex> 257 { 8 -20 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 258 { 8 20 0.01 <Normal> { 0 0 1 } <UV> { 0 1 } }
+    <Vertex> 259 { 9 -20 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 260 { 9 20 0.01 <Normal> { 0 0 1 } <UV> { 0 1 } }
+    <Vertex> 261 { 10 -20 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 262 { 10 20 0.01 <Normal> { 0 0 1 } <UV> { 0 1 } }
+    <Vertex> 263 { 11 -20 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 264 { 11 20 0.01 <Normal> { 0 0 1 } <UV> { 0 1 } }
+    <Vertex> 265 { 12 -20 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 266 { 12 20 0.01 <Normal> { 0 0 1 } <UV> { 0 1 } }
+    <Vertex> 267 { 13 -20 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 268 { 13 20 0.01 <Normal> { 0 0 1 } <UV> { 0 1 } }
+    <Vertex> 269 { 14 -20 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 270 { 14 20 0.01 <Normal> { 0 0 1 } <UV> { 0 1 } }
+    <Vertex> 271 { 15 -20 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 272 { 15 20 0.01 <Normal> { 0 0 1 } <UV> { 0 1 } }
+    <Vertex> 273 { 16 -20 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 274 { 16 20 0.01 <Normal> { 0 0 1 } <UV> { 0 1 } }
+    <Vertex> 275 { 17 -20 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 276 { 17 20 0.01 <Normal> { 0 0 1 } <UV> { 0 1 } }
+    <Vertex> 277 { 18 -20 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 278 { 18 20 0.01 <Normal> { 0 0 1 } <UV> { 0 1 } }
+    <Vertex> 279 { 19 -20 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 280 { 19 20 0.01 <Normal> { 0 0 1 } <UV> { 0 1 } }
+    <Vertex> 281 { 20 -20 0.01 <Normal> { 0 0 1 } <UV> { 0 0 } }
+    <Vertex> 282 { 20 20 0.01 <Normal> { 0 0 1 } <UV> { 0 1 } }
+    
+    <!-- X axis (highlighted) -->
+    <Vertex> 301 { 0 0 0.02 <Normal> { 0 0 1 } <UV> { 0 0 } <Color> { 1 0 0 1 } }
+    <Vertex> 302 { 20 0 0.02 <Normal> { 0 0 1 } <UV> { 1 0 } <Color> { 1 0 0 1 } }
+    
+    <!-- Y axis (highlighted) -->
+    <Vertex> 303 { 0 0 0.02 <Normal> { 0 0 1 } <UV> { 0 0 } <Color> { 0 1 0 1 } }
+    <Vertex> 304 { 0 20 0.02 <Normal> { 0 0 1 } <UV> { 0 1 } <Color> { 0 1 0 1 } }
+  }
+  
+  <!-- Draw the horizontal grid lines -->
+  <Line> {
+    <VertexRef> { 101 102 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 103 104 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 105 106 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 107 108 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 109 110 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 111 112 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 113 114 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 115 116 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 117 118 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 119 120 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 121 122 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 123 124 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 125 126 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 127 128 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 129 130 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 131 132 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 133 134 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 135 136 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 137 138 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 139 140 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 141 142 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 143 144 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 145 146 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 147 148 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 149 150 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 151 152 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 153 154 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 155 156 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 157 158 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 159 160 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 161 162 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 163 164 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 165 166 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 167 168 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 169 170 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 171 172 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 173 174 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 175 176 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 177 178 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 179 180 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 181 182 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  
+  <!-- Draw the vertical grid lines -->
+  <Line> {
+    <VertexRef> { 201 202 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 203 204 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 205 206 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 207 208 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 209 210 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 211 212 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 213 214 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 215 216 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 217 218 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 219 220 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 221 222 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 223 224 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 225 226 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 227 228 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 229 230 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 231 232 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 233 234 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 235 236 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 237 238 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 239 240 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 241 242 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 243 244 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 245 246 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 247 248 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 249 250 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 251 252 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 253 254 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 255 256 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 257 258 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 259 260 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 261 262 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 263 264 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 265 266 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 267 268 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 269 270 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 271 272 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 273 274 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 275 276 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 277 278 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 279 280 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  <Line> {
+    <VertexRef> { 281 282 <Ref> { grid-verts } }
+    <Color> { 0.5 0.5 0.5 1 }
+  }
+  
+  <!-- Draw the X axis -->
+  <Line> {
+    <VertexRef> { 301 302 <Ref> { grid-verts } }
+    <Color> { 1 0 0 1 }
+    <Width> 3
+  }
+  
+  <!-- Draw the Y axis -->
+  <Line> {
+    <VertexRef> { 303 304 <Ref> { grid-verts } }
+    <Color> { 0 1 0 1 }
+    <Width> 3
+  }
+}

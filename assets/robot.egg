@@ -1,0 +1,84 @@
+<CoordinateSystem> { Z-up }
+
+<Texture> body-tex {
+  "../maps/body-tex.rgb"
+}
+
+<Group> {
+  <Transform> {
+    <Matrix4> {
+      1 0 0 0
+      0 1 0 0
+      0 0 1 0
+      0 0 0 1
+    }
+  }
+  
+  <VertexPool> robot-verts {
+    <Vertex> 1 {
+      -0.1 -0.1 0
+      <Normal> { 0 0 1 }
+      <UV> { 0 0 }
+    }
+    <Vertex> 2 {
+      0.1 -0.1 0
+      <Normal> { 0 0 1 }
+      <UV> { 1 0 }
+    }
+    <Vertex> 3 {
+      0.1 0.1 0
+      <Normal> { 0 0 1 }
+      <UV> { 1 1 }
+    }
+    <Vertex> 4 {
+      -0.1 0.1 0
+      <Normal> { 0 0 1 }
+      <UV> { 0 1 }
+    }
+    <Vertex> 5 {
+      -0.1 -0.1 0.05
+      <Normal> { 0 0 1 }
+      <UV> { 0 0 }
+    }
+    <Vertex> 6 {
+      0.1 -0.1 0.05
+      <Normal> { 0 0 1 }
+      <UV> { 1 0 }
+    }
+    <Vertex> 7 {
+      0.1 0.1 0.05
+      <Normal> { 0 0 1 }
+      <UV> { 1 1 }
+    }
+    <Vertex> 8 {
+      -0.1 0.1 0.05
+      <Normal> { 0 0 1 }
+      <UV> { 0 1 }
+    }
+  }
+  
+  <Polygon> {
+    <TRef> { body-tex }
+    <VertexRef> { 1 2 3 4 <Ref> { robot-verts } }
+  }
+  <Polygon> {
+    <TRef> { body-tex }
+    <VertexRef> { 5 6 7 8 <Ref> { robot-verts } }
+  }
+  <Polygon> {
+    <TRef> { body-tex }
+    <VertexRef> { 1 2 6 5 <Ref> { robot-verts } }
+  }
+  <Polygon> {
+    <TRef> { body-tex }
+    <VertexRef> { 2 3 7 6 <Ref> { robot-verts } }
+  }
+  <Polygon> {
+    <TRef> { body-tex }
+    <VertexRef> { 3 4 8 7 <Ref> { robot-verts } }
+  }
+  <Polygon> {
+    <TRef> { body-tex }
+    <VertexRef> { 4 1 5 8 <Ref> { robot-verts } }
+  }
+}
