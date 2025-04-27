@@ -1,8 +1,3 @@
-"""
-UI Controller module for differential vehicle simulation.
-This module handles the user interface for controlling the vehicle.
-"""
-
 import numpy as np
 from direct.gui.DirectGui import DirectButton, DirectFrame, DirectLabel, DirectEntry
 from direct.gui.DirectGui import DirectSlider, DirectOptionMenu
@@ -10,78 +5,36 @@ from direct.gui.OnscreenText import OnscreenText
 from panda3d.core import TextNode, Vec3, Point3
 
 class UIController:
-    """
-    User interface controller for the differential vehicle simulation.
-    Provides controls for:
-    - Manual voltage control
-    - Position and orientation setting
-    - Waypoint management
-    - Control algorithm selection
-    """
-
     def __init__(self, app, vehicle, simulation, path_planner, position_controller):
-        """
-        Initialize the UI controller.
-
-        Args:
-            app: The main application
-            vehicle: The vehicle model
-            simulation: The simulation environment
-            path_planner: The path planner module
-            position_controller: The position controller module
-        """
         self.app = app
         self.vehicle = vehicle
         self.simulation = simulation
         self.path_planner = path_planner
         self.position_controller = position_controller
-
-        # State variables
-        self.control_mode = "manual"  # "manual", "waypoint", "position"
+        self.control_mode = "manual"
         self.left_voltage = 0.0
         self.right_voltage = 0.0
         self.target_x = 0.0
         self.target_y = 0.0
         self.target_theta = 0.0
-
-        # Setup keyboard controls
         self.setup_keyboard_controls()
-
-        # Create the UI elements
         self._create_ui()
 
     def _create_ui(self):
-        """Create the UI elements."""
-        # Main control panel frame
         self.main_frame = DirectFrame(
             frameColor=(0.2, 0.2, 0.2, 0.8),
             frameSize=(-0.8, 0.8, -0.4, 0.4),
             pos=(0, 0, -0.5)
         )
-
-        # Create tabs for different control modes
         self._create_tab_buttons()
-
-        # Create the manual control panel
         self._create_manual_control()
-
-        # Create the waypoint control panel
         self._create_waypoint_control()
-
-        # Create the position control panel
         self._create_position_control()
-
-        # Create the model visualization panel
         self._create_model_visualization()
-
-        # Create the telemetry panel
         self._create_telemetry()
-
-        # Show the default panel
         self._show_panel("manual")
 
     def _create_tab_buttons(self):
-        """Create the tab buttons."""
         tab_width = 0.2
         tab_height = 0.05
         tab_y = 0.4
@@ -314,7 +267,7 @@ class UIController:
             parent=bottom_panel
         )
 
-        # Mensaje de click
+
         DirectLabel(
             text="Click in scene: Ctrl + Click to add waypoint",
             scale=0.04,
@@ -322,7 +275,6 @@ class UIController:
             parent=bottom_panel
         )
 
-        # Start/stop following waypoints
         self.follow_button = DirectButton(
             text="Start Following",
             scale=0.07,
@@ -346,7 +298,6 @@ class UIController:
             pressEffect=1
         )
 
-        # Waypoint planning algorithm selection
         DirectLabel(
             text="Planning Algorithm:",
             scale=0.05,
@@ -363,7 +314,6 @@ class UIController:
             parent=self.waypoint_panel
         )
 
-        # Set up a click event for the screen to add waypoints
         self.app.accept("mouse1", self._on_screen_click)
 
     def _create_position_control(self):
@@ -375,7 +325,6 @@ class UIController:
             parent=self.main_frame
         )
 
-        # Target position and orientation
         DirectLabel(
             text="Target Position and Orientation",
             scale=0.05,
@@ -401,7 +350,6 @@ class UIController:
             parent=self.position_panel
         )
 
-        # Y position entry
         DirectLabel(
             text="Y:",
             scale=0.05,
@@ -419,9 +367,8 @@ class UIController:
             parent=self.position_panel
         )
 
-        # Theta orientation entry
         DirectLabel(
-            text="θ:",
+            text="Theta:",  # Cambiado de θ a Theta
             scale=0.05,
             pos=(0.0, 0, 0.15),
             parent=self.position_panel
@@ -501,7 +448,7 @@ class UIController:
         # Kinematic model button
         self.kinematic_button = DirectButton(
             text="Show Kinematic Model",
-            scale=0.07,
+            scale=0.05,
             frameSize=(-0.4, 0.4, -0.1, 0.1),
             pos=(-0.3, 0, 0.2),
             relief=1,
@@ -513,7 +460,7 @@ class UIController:
         # Dynamic model button
         self.dynamic_button = DirectButton(
             text="Show Dynamic Model",
-            scale=0.07,
+            scale=0.05,
             frameSize=(-0.4, 0.4, -0.1, 0.1),
             pos=(0.3, 0, 0.2),
             relief=1,
@@ -534,10 +481,10 @@ class UIController:
         DirectLabel(
             text=(
                 "v = (vr + vl)/2         - Linear velocity\n"
-                "ω = (vr - vl)/L         - Angular velocity\n"
-                "ẋ = v·cos(θ)            - X velocity\n"
-                "ẏ = v·sin(θ)            - Y velocity\n"
-                "θ̇ = ω                    - Angular velocity"
+                "w = (vr - vl)/L         - Angular velocity\n"
+                "dx = v*cos(theta)       - X velocity\n"
+                "dy = v*sin(theta)       - Y velocity\n"
+                "dtheta = w              - Angular velocity"
             ),
             scale=0.04,
             pos=(-0.3, 0, -0.05),
@@ -611,7 +558,7 @@ class UIController:
         )
 
         self.telemetry_orientation = DirectLabel(
-            text="θ: 0.00 degrees",
+            text="Theta: 0.00 degrees",  # Cambiado de θ a Theta
             scale=0.04,
             text_align=TextNode.ALeft,
             pos=(-0.25, 0, 0.00),
@@ -895,7 +842,7 @@ class UIController:
 
         # Actualizar telemetría
         self.telemetry_position["text"] = f"X: {pos[0]:.2f}  Y: {pos[1]:.2f}"
-        self.telemetry_orientation["text"] = f"θ: {np.degrees(pos[2]):.2f} degrees"
+        self.telemetry_orientation["text"] = f"Theta: {np.degrees(pos[2]):.2f} degrees"  # Cambiado de θ a Theta
         self.telemetry_velocities["text"] = f"Linear: {vel[0]:.2f} m/s\nAngular: {vel[1]:.2f} rad/s"
         self.telemetry_motors["text"] = f"Left: {self.left_voltage:.2f} V, {wheel_speeds[0]:.2f} rad/s\n" \
                                         f"Right: {self.right_voltage:.2f} V, {wheel_speeds[1]:.2f} rad/s"
